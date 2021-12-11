@@ -1,4 +1,4 @@
-\c books
+\c books-test
 
 CREATE TABLE books (
   isbn TEXT PRIMARY KEY,

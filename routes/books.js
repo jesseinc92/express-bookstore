@@ -59,7 +59,7 @@ router.put("/:isbn", async function (req, res, next) {
       let schemaErrors = result.errors.map(err => err.stack);
       let error = new ExpressError(schemaErrors, 400);
 
-      return next(err);
+      return next(error);
     }
 
     const book = await Book.update(req.params.isbn, req.body);
